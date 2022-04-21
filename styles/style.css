@@ -679,6 +679,12 @@ a{
   .section_1{
     height: 175vh;
   }
+  .section_2{
+    height: 130vh;
+  }
+  .item_quest{
+    height: 10%;
+  }
   .item_rev{
     flex-wrap: wrap;
     height: 20%;
@@ -750,3 +756,15 @@ a{
     height: 8.5%;
   }
 }
+@media screen and (max-width: 400px){
+  .section_1{
+    height: 130vh;
+  }
+  .item_appartments {
+    height: 60%;
+}
+  .section_2{
+    height: 110vh;
+  }
+}
+
