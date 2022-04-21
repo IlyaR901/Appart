@@ -593,14 +593,18 @@ a{
     width: 95%;
   }
   .header_nav{
-    padding-top: 10px;
+    padding-top: 40px;
+  }
+  .header_nav .logo{
+    position: fixed;
   }
   .burger{
     display: block;
-    position: relative;
+    position: fixed;
     width: 30px;
     height: 20px;
     z-index: 3;
+    right: 50px;
   }
   .burger span{
     position: absolute;
