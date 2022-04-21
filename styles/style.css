@@ -592,6 +592,9 @@ a{
   .wrapper{
     width: 95%;
   }
+  .header_nav{
+    padding-top: 10px;
+  }
   .burger{
     display: block;
     position: relative;
