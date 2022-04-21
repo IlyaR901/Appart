@@ -591,9 +591,6 @@ a{
 @media screen and (max-width: 768px){
   .wrapper{
     width: 95%;
-  }
-  .header_nav{
-    padding: 0;
   } 
   .burger{
     display: block;
