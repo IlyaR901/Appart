@@ -68,7 +68,6 @@
 header {
   background: url(../images/first-screen.png) 50%/cover no-repeat;
 }
-
 .header {
   display: flex;
   flex-direction: column;
@@ -89,6 +88,7 @@ header {
 .logo {
   width: 137px;
   height: 66px;
+  z-index: 3;
 }
 .logo h2:hover {
   color: rgba(212, 193, 127, 1);
@@ -115,7 +115,6 @@ header {
   letter-spacing: 1px;
   margin: 0;
 }
-
 .nav ul {
   font-family: "Raleway";
   font-style: normal;
@@ -139,7 +138,6 @@ header {
 .burger{
   display: none;
 }
-
 .appartments {
   height: 29%;
   display: flex;
@@ -147,7 +145,6 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 .appart_text h1 {
   font-family: "PlayFair_Display";
   font-style: normal;
@@ -158,7 +155,6 @@ header {
   color: #d4c17f;
   margin-top: 0;
 }
-
 .contacts {
   display: flex;
   color: white;
@@ -396,7 +392,7 @@ input::placeholder {
 }
 .item_video svg{
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 .item_map{
   display: flex;
@@ -592,20 +588,77 @@ a{
     font-size: 8px;
   }
 }
-@media screen and (max-width: 778px){
+@media screen and (max-width: 768px){
   .wrapper{
     width: 95%;
   }
   .header_nav{
-    display: none;
-  }
+    padding: 0;
+  } 
   .burger{
     display: block;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    width: 90%;
-    margin: 0 auto;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .burger span{
+    position: absolute;
+    background-color: #d4c17f;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .burger::before, .burger::after{
+    content: '';
+    background-color: #d4c17f;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .burger::before{
+    top: 0;
+  }
+  .burger::after{
+    bottom: 0;
+  }
+  .burger.active::before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .burger.active::after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .burger.active span{
+    transform: scale(0);
+  }
+  .nav{    
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transition: all 0.3s ease 0s;
+    background-color: rgba(45, 52, 60, 1);
+    padding-top: 90px;
+    z-index: 2;
+  }
+  .nav.active{
+    top: 0;
+  }
+  .nav ul{
+    font-size: 12px;
+    display: block;
+    text-transform: uppercase;
+  }
+  .nav ul li{
+    padding: 0px 0px 10px 0px;
+    margin: 0;
   }
   .appart_text h1{
     font-size: 38px;
@@ -652,6 +705,9 @@ a{
   }
   .item_video video{
     width: 100%;
+  }
+  .block .logo{
+    z-index: 1;
   }
 }
 @media screen and (max-width: 650px){
@@ -720,9 +776,6 @@ a{
   }
   .button2{
     font-size: 12px;
-  }
-  .logo{
-    display: none;
   }  
 }
 @media screen and (max-width: 475px){
@@ -773,4 +826,3 @@ a{
     height: 150vh;
   }
 }
-
