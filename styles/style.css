@@ -680,10 +680,16 @@ a{
     height: 175vh;
   }
   .section_2{
-    height: 130vh;
+    height: 150vh;
+  }
+  .item_video{
+    height: 25%;
+  }
+  .item_map{
+    height: 25%;
   }
   .item_quest{
-    height: 10%;
+    height: 15%;
   }
   .item_rev{
     flex-wrap: wrap;
@@ -758,13 +764,13 @@ a{
 }
 @media screen and (max-width: 400px){
   .section_1{
-    height: 130vh;
+    height: 175vh;
   }
   .item_appartments {
     height: 60%;
 }
   .section_2{
-    height: 110vh;
+    height: 150vh;
   }
 }
 
